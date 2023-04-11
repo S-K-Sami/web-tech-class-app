@@ -1,7 +1,7 @@
 package cse.web;
 
 public class StdCourse {
-    private static final long serialVersionUID = 1L;
+    // private static final long serialVersionUID = 1L;
     private int student_id;
     private int course_id;
     public int getStudentId() {

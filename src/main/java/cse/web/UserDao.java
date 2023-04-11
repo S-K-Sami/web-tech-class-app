@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import cse.web.User;
+// import cse.web.User;
 
 public class UserDao {
     public int registerUser(User user) throws ClassNotFoundException {

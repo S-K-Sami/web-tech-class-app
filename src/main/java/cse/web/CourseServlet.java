@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cse.web.Course;
-import cse.web.CourseDao;
+// import cse.web.Course;
+// import cse.web.CourseDao;
 
 @WebServlet("/register_course")
 public class CourseServlet extends HttpServlet {
@@ -23,9 +23,13 @@ public class CourseServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
+        String id = request.getParameter("id");
+        String course_name = request.getParameter("course_name");
         int teacher_id = Integer.parseInt(request.getParameter("teacher_id"));
 
         Course course = new Course();
+        course.setID(id);
+        course.setCourseName(course_name);
         course.setTeacherId(teacher_id);
 
         try {

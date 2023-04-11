@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import cse.web.Course;
+// import cse.web.Course;
 
 public class CourseDao {
     public int registerCourse(Course course) throws ClassNotFoundException {
         String INSERT_COURSES_SQL = "INSERT INTO course" +
-                "  (teacher_id) VALUES " +
-                " (?);";
+                "  (id, course_name, teacher_id) VALUES " +
+                " (?, ?, ?);";
 
         int result = 0;
 
@@ -22,7 +22,9 @@ public class CourseDao {
 
                 // Step 2:Create a statement using connection object
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_COURSES_SQL)) {
-            preparedStatement.setInt(1, course.getTeacherId());
+            preparedStatement.setString(1, course.getID());
+            preparedStatement.setString(2, course.getCourseName());
+            preparedStatement.setInt(3, course.getTeacherId());
 
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query

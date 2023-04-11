@@ -25,11 +25,19 @@
         <form action="<%= request.getContextPath() %>/register_course" method="post">
             <table style="width: 80%">
                 <tr>
+                    <td>Course ID</td>
+                    <td><input type="text" name="id" /></td>
+                </tr>
+                <tr>
+                    <td>Course Name</td>
+                    <td><input type="text" name="course_name" /></td>
+                </tr>
+                <tr>
                     <td><label for="teachers">Course Teacher</label></td>
                     <td>
                         <select name="teacher_id" id="teachers">
                             <c:forEach var = "row" items = "${result.rows}">
-                                <option value="${row.id}">${row.firstName} ${row.lastName}</option>
+                                <option value="${row.id}">${row.first_name} ${row.last_name}</option>
                             </c:forEach>
                         </select>
                     </td>

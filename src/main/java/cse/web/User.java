@@ -1,7 +1,7 @@
 package cse.web;
 
 public class User {
-    private static final long serialVersionUID = 1L;
+    // private static final long serialVersionUID = 1L;
     enum Type {admin, teacher, student};
     private Type type;
     private String firstName;

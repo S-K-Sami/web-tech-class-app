@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import cse.web.User;
-import cse.web.UserDao;
+// import cse.web.User;
+// import cse.web.UserDao;
 import cse.web.User.Type;
 
 @WebServlet("/register")
