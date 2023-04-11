@@ -58,6 +58,11 @@ DROP TABLE web_app.tch_course;
 DROP TABLE web_app.course;
 -- DROP TABLE web_app.user;
 -- @block
+DESCRIBE web_app.std_course;
+DESCRIBE web_app.tch_course;
+DESCRIBE web_app.course;
+DESCRIBE web_app.user;
+-- @block
 INSERT INTO `user` (
         `id`,
         `first_name`,
@@ -77,11 +82,9 @@ VALUES (
         'contact:VARCHAR'
     );
 -- @block
-ALTER TABLE user
-MODIFY id INT(3) NOT NULL AUTO_INCREMENT;
+ALTER TABLE user MODIFY username VARCHAR(20) NOT NULL UNIQUE;
 -- @block
-ALTER TABLE course
-MODIFY `teacher_id` INT(3) NOT NULL;
+ALTER TABLE course MODIFY `teacher_id` INT(3) NOT NULL;
 -- @block
 SELECT * FROM web_app.user WHERE type="teacher";
 SELECT first_name, last_name FROM web_app.user WHERE type="teacher" AND id=4 LIMIT 1;

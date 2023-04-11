@@ -36,6 +36,11 @@
 		</form>
 	</div>
 	<div>
+		<a href="login.jsp">login</a>|  
+		<a href="logout.jsp">logout</a>|  
+		<a href="profile.jsp">profile</a>
+	</div>
+	<div>
 		<button onclick="user_register()">User Register</button>
 	</div>
 	<div>
