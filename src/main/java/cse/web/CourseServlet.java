@@ -35,7 +35,7 @@ public class CourseServlet extends HttpServlet {
         try {
             courseDao.registerCourse(course);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
+            // TOD Auto-generated catch block
             e.printStackTrace();
         }
 
