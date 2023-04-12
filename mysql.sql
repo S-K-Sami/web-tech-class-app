@@ -12,7 +12,7 @@ CREATE TABLE `user` (
     `type` ENUM('admin', 'teacher', 'student'),
     `first_name` VARCHAR(40) DEFAULT NULL,
     `last_name` VARCHAR(40) DEFAULT NULL,
-    `username` VARCHAR(20) DEFAULT NULL,
+    `username` VARCHAR(20) NOT NULL UNIQUE,
     `password` VARCHAR(30) DEFAULT NULL,
     `address` VARCHAR(45) DEFAULT NULL,
     `contact` VARCHAR(45) DEFAULT NULL,
